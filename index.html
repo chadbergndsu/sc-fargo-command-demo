@@ -1,48 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<html lang="en"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>SC Fargo Command — Dan Bryant</title>
 <meta name="theme-color" content="#5ecf3e"/>
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet"/>
 <style>
-:root{--s:#5ecf3e;--sd:#3daa28;--ss:#e8f9e0;--a:#ff6b35;--as:#fff0e9;--fg:#1a2e14;--m:#4a6350;--su:#7a9180;--w:#fff;--b:#d4e8cb;--bg:#f0f9ec}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.5}
+:root{--s:#5ecf3e;--sd:#3daa28;--ss:#e8f9e0;--a:#ff6b35;--as:#fff0e9;--fg:#1a2e14;--m:#4a6350;--w:#fff;--b:#d4e8cb;--bg:#f0f9ec}
+*{box-sizing:border-box;margin:0;padding:0}body{font-family:Nunito,system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.45}
 .mesh{min-height:100dvh;background:radial-gradient(ellipse 80% 50% at 10% -10%,rgba(94,207,62,.18),transparent),var(--bg)}
-.wrap{max-width:1000px;margin:0 auto;padding:1.25rem 1rem 3rem}
-.fd{font-family:Fredoka,system-ui,sans-serif}
-.btn{display:inline-flex;align-items:center;gap:.4rem;font-weight:700;border:0;cursor:pointer;border-radius:1rem;padding:.7rem 1.2rem;font-family:inherit;font-size:.95rem}
-.bp{background:var(--s);color:#fff}.bs{background:var(--w);border:1px solid var(--b);color:var(--fg)}
-.card{background:var(--w);border:1px solid var(--b);border-radius:1rem;padding:1rem;box-shadow:0 4px 16px rgba(62,140,40,.08)}
-.card-a{background:var(--as);border-color:rgba(255,107,53,.25)}
-.g3{display:grid;gap:.85rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
-.g4{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))}
-.nav{display:flex;flex-wrap:wrap;gap:.25rem;padding:.4rem;background:var(--w);border:1px solid var(--b);border-radius:1rem;margin:0 0 1rem}
-.nav button{padding:.45rem .75rem;border-radius:.65rem;border:0;background:transparent;font-weight:700;color:var(--m);cursor:pointer;font-family:inherit;font-size:.85rem}
+.w{max-width:960px;margin:0 auto;padding:1.1rem 1rem 2.5rem}.fd{font-family:Fredoka,system-ui,sans-serif}
+.btn{display:inline-flex;align-items:center;font-weight:700;border:0;cursor:pointer;border-radius:.9rem;padding:.65rem 1.05rem;font-family:inherit}
+.bp{background:var(--s);color:#fff}.bs{background:var(--w);border:1px solid var(--b)}
+.card{background:var(--w);border:1px solid var(--b);border-radius:.9rem;padding:.9rem;box-shadow:0 3px 12px rgba(62,140,40,.07)}
+.g{display:grid;gap:.7rem;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.nav{display:flex;flex-wrap:wrap;gap:.2rem;padding:.35rem;background:var(--w);border:1px solid var(--b);border-radius:.9rem;margin:0 0 .9rem}
+.nav button{padding:.4rem .65rem;border-radius:.55rem;border:0;background:0;font-weight:700;color:var(--m);cursor:pointer;font-family:inherit}
 .nav button.on{background:var(--s);color:#fff}
-.sv{font-family:Fredoka,system-ui,sans-serif;font-size:1.5rem;font-weight:700}
-.sl{font-size:.75rem;color:var(--m);font-weight:700}
-.muted{color:var(--m)}.subtle{color:var(--su);font-size:.8rem}
-.badge{display:inline-block;padding:.15rem .6rem;border-radius:999px;font-size:.65rem;font-weight:800;text-transform:uppercase}
-.bg-s{background:var(--ss);color:var(--sd)}.bg-m{background:var(--w);border:1px solid var(--b);color:var(--m)}
-table{width:100%;border-collapse:collapse;font-size:.85rem}
-th,td{padding:.55rem .6rem;border-bottom:1px solid var(--b);text-align:left}
-th{font-size:.65rem;text-transform:uppercase;color:var(--su)}
-.pill{padding:.1rem .45rem;border-radius:999px;font-size:.65rem;font-weight:800}
-.pg{background:var(--ss);color:var(--sd)}.po{background:var(--as);color:var(--a)}
-.bar{display:flex;gap:.6rem;align-items:center;margin:.4rem 0}
-.bl{width:5rem;font-size:.7rem;font-weight:700;color:var(--m);flex-shrink:0}
-.bt{flex:1;height:.55rem;background:#eef6ea;border-radius:99px;overflow:hidden;border:1px solid var(--b)}
-.bf{height:100%;background:linear-gradient(90deg,var(--s),#7de05c)}
-.bv{font-size:.7rem;font-weight:800;width:2.2rem;text-align:right}
-.logo{width:2.8rem;height:2.8rem;border-radius:.85rem;background:linear-gradient(135deg,#5ecf3e,#7de05c);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800}
-h1{font-family:Fredoka,system-ui,sans-serif;font-size:clamp(1.7rem,4vw,2.6rem);margin:.7rem 0;line-height:1.15}
-</style>
-</head>
-<body>
-<div id="app" class="mesh"></div>
+.sv{font-family:Fredoka,system-ui;font-size:1.35rem;font-weight:700}.sl{font-size:.72rem;color:var(--m);font-weight:700}
+.muted{color:var(--m)}.subtle{color:#7a9180;font-size:.78rem}
+.badge{display:inline-block;padding:.12rem .5rem;border-radius:999px;font-size:.62rem;font-weight:800;text-transform:uppercase;background:var(--ss);color:var(--sd)}
+table{width:100%;border-collapse:collapse;font-size:.82rem}th,td{padding:.45rem .5rem;border-bottom:1px solid var(--b);text-align:left}
+th{font-size:.62rem;text-transform:uppercase;color:#7a9180}
+.pill{padding:.08rem .4rem;border-radius:999px;font-size:.62rem;font-weight:800;background:var(--as);color:var(--a)}
+.ok{background:var(--ss);color:var(--sd)}
+.bar{display:flex;gap:.5rem;align-items:center;margin:.35rem 0}.bl{width:4.5rem;font-size:.68rem;font-weight:700;color:var(--m)}
+.bt{flex:1;height:.5rem;background:#eef6ea;border-radius:99px;overflow:hidden;border:1px solid var(--b)}
+.bf{height:100%;background:linear-gradient(90deg,var(--s),#7de05c)}.bv{font-size:.68rem;font-weight:800;width:2rem;text-align:right}
+h1{font-family:Fredoka,system-ui;font-size:clamp(1.5rem,4vw,2.3rem);margin:.55rem 0;line-height:1.15}
+</style></head><body><div id="app" class="mesh"></div>
 <script>
 (function(){
 var S={g:412,r:18420,t:44.7,f:68,w:17};
@@ -57,57 +42,30 @@ var AT=[["app","Wallet"],["rewards","Rewards"],["vote","Vote"]];
 var page="home";
 function go(p){page=p;render()}
 function home(){
-  var plan=[["1. Roller data","Live tickets + food POS"],["2. Visitor intel","Groups, drive distance, mix"],["3. Outside signals","Weather, schools, competitors"],["4. Ads that pay","Who, offer, channel, lift"],["5. Track & tweak","Live ROI, re-score"],["6-7. Loyalty + VIP","Points, votes, glow nights"]];
-  var extras=[["Win-back radar","Cold high-LTV accounts + draft offers","winback"],["Labor & capacity","7-day crew gaps before the rush","labor"],["Party pipeline","Radar to deposit to won","parties"]];
-  return '<div class="wrap"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem"><div style="display:flex;gap:.75rem;align-items:center"><div class="logo">SC</div><div><div class="fd" style="font-weight:700;font-size:1.1rem">SC Fargo Command</div><div class="subtle">Built for Dan Bryant · Fargo, ND</div></div></div><span class="badge bg-m">Confidential</span></div><span class="badge bg-s">7-point plan + 3 extras</span><h1>Perfect Fargo. Then buy parks and double revenue.</h1><p class="muted" style="max-width:36rem;margin-bottom:1rem">Roller-connected intelligence, ads that pay, win-back, labor forecast, party radar, VIP + guest loyalty. Ready for your walkthrough.</p><div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-bottom:.6rem"><button class="btn bp" type="button" data-go="ops">Operator command →</button><button class="btn bs" type="button" data-go="app">Guest loyalty app</button></div><p class="subtle" style="margin-bottom:1.5rem">Path: Overview → Win-back → Labor → Parties → Guest app</p><div class="g3" style="margin-bottom:1rem">'+plan.map(function(x){return '<div class="card"><div class="fd" style="font-size:.9rem;margin-bottom:.3rem">'+x[0]+'</div><p class="muted" style="font-size:.82rem">'+x[1]+'</p></div>'}).join('')+'</div><div class="g3">'+extras.map(function(x){return '<div class="card card-a"><div class="fd" style="font-size:.9rem;margin-bottom:.3rem">'+x[0]+'</div><p class="muted" style="font-size:.82rem;margin-bottom:.5rem">'+x[1]+'</p><button class="btn" type="button" data-go="'+x[2]+'" style="background:transparent;color:var(--a);padding:0;font-size:.78rem">Open →</button></div>'}).join('')+'</div></div>';
+return '<div class="w"><div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem"><div><div class="fd" style="font-weight:700;font-size:1.05rem">SC Fargo Command</div><div class="subtle">Built for Dan Bryant · Fargo, ND</div></div><span class="badge" style="background:#fff;border:1px solid var(--b);color:var(--m)">Confidential</span></div><span class="badge">7-point plan + 3 extras</span><h1>Perfect Fargo. Then buy parks and double revenue.</h1><p class="muted" style="max-width:34rem;margin-bottom:.9rem">Roller-connected intelligence, ads that pay, win-back, labor forecast, party radar, VIP + guest loyalty.</p><div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1.2rem"><button class="btn bp" data-go="ops">Operator command →</button><button class="btn bs" data-go="app">Guest loyalty app</button></div><div class="g">'+[["1. Roller data","Live tickets + food POS"],["2. Visitor intel","Groups, drive distance, mix"],["3. Outside signals","Weather, schools, competitors"],["4. Ads that pay","Who, offer, channel, lift"],["5. Track & tweak","Live ROI, re-score"],["6-7. Loyalty + VIP","Points, votes, glow nights"]].map(function(x){return '<div class="card"><div class="fd" style="font-size:.88rem;margin-bottom:.25rem">'+x[0]+'</div><p class="muted" style="font-size:.8rem">'+x[1]+'</p></div>'}).join('')+'</div></div>';
 }
-function shell(title,sub,tabs,bodyHtml){
-  return '<div class="wrap"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:1rem;flex-wrap:wrap;gap:.5rem"><div><div class="fd" style="font-weight:700">'+title+'</div><div class="subtle">'+sub+'</div></div><button class="btn bs" type="button" data-go="home" style="padding:.4rem .8rem;font-size:.8rem">← Home</button></div><div class="nav">'+tabs.map(function(t){return '<button type="button" class="'+(page===t[0]?'on':'')+'" data-go="'+t[0]+'">'+t[1]+'</button>'}).join('')+'</div>'+bodyHtml+'</div>';
+function shell(title,sub,tabs,body){
+return '<div class="w"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.9rem;flex-wrap:wrap;gap:.4rem"><div><div class="fd" style="font-weight:700">'+title+'</div><div class="subtle">'+sub+'</div></div><button class="btn bs" data-go="home" style="padding:.35rem .7rem;font-size:.78rem">← Home</button></div><div class="nav">'+tabs.map(function(t){return '<button class="'+(page===t[0]?'on':'')+'" data-go="'+t[0]+'">'+t[1]+'</button>'}).join('')+'</div>'+body+'</div>';
 }
 function body(){
-  if(page==='ops'){
-    return '<div class="g4" style="margin-bottom:1rem"><div class="card"><div class="sv">'+S.g+'</div><div class="sl">Guests today</div></div><div class="card"><div class="sv">$'+S.r.toLocaleString()+'</div><div class="sl">Revenue</div></div><div class="card"><div class="sv">$'+S.t+'</div><div class="sl">Avg ticket</div></div><div class="card"><div class="sv">'+S.f+'%</div><div class="sl">Food attach</div></div></div><div class="card"><div class="fd" style="margin-bottom:.7rem">Hourly traffic</div>'+H.map(function(h){return '<div class="bar"><div class="bl">'+h[0]+'</div><div class="bt"><div class="bf" style="width:'+h[1]+'%"></div></div><div class="bv">'+h[1]+'</div></div>'}).join('')+'</div>';
-  }
-  if(page==='winback'){
-    return '<p class="muted" style="margin-bottom:.8rem">'+S.w+' high-LTV accounts cooling off</p><div class="card" style="overflow:auto"><table><thead><tr><th>Account</th><th>LTV</th><th>Last</th><th>Risk</th><th>Offer</th></tr></thead><tbody>'+W.map(function(w){return '<tr><td style="font-weight:700">'+w[0]+'</td><td>$'+w[1].toLocaleString()+'</td><td>'+w[2]+'</td><td><span class="pill '+(w[3]==='High'?'po':'pg')+'">'+w[3]+'</span></td><td>'+w[4]+'</td></tr>'}).join('')+'</tbody></table></div>';
-  }
-  if(page==='labor'){
-    return '<div class="card" style="overflow:auto"><table><thead><tr><th>Day</th><th>Demand</th><th>Staff</th><th>Need</th><th>Status</th></tr></thead><tbody>'+L.map(function(l){var g=l[3]-l[2];return '<tr><td style="font-weight:700">'+l[0]+'</td><td>'+l[1]+'</td><td>'+l[2]+'</td><td>'+l[3]+'</td><td><span class="pill '+(g>0?'po':'pg')+'">'+(g>0?('+'+g+' needed'):'Covered')+'</span></td></tr>'}).join('')+'</tbody></table></div>';
-  }
-  if(page==='parties'){
-    return '<div class="card" style="overflow:auto"><table><thead><tr><th>Kid</th><th>Age</th><th>Date</th><th>Stage</th><th>Value</th></tr></thead><tbody>'+P.map(function(p){return '<tr><td style="font-weight:700">'+p[0]+'</td><td>'+p[1]+'</td><td>'+p[2]+'</td><td>'+p[3]+'</td><td>$'+p[4]+'</td></tr>'}).join('')+'</tbody></table></div>';
-  }
-  if(page==='ads'){
-    return '<div class="g3">'+A.map(function(a){return '<div class="card"><div style="display:flex;justify-content:space-between;gap:.5rem;flex-wrap:wrap"><strong style="font-size:.88rem">'+a[0]+'</strong><span class="pill pg">'+a[3]+'</span></div><p class="muted" style="font-size:.82rem;margin-top:.4rem">'+a[1]+' · '+a[2]+'</p></div>'}).join('')+'</div>';
-  }
-  if(page==='vip'){
-    return '<div class="g3">'+V.map(function(v){return '<div class="card"><div class="fd" style="font-size:.95rem">'+v[0]+'</div><div class="subtle">'+v[1]+'</div><div style="font-weight:700;margin:.4rem 0">'+v[2]+'/'+v[3]+' RSVPs</div><span class="pill pg">'+v[4]+'</span></div>'}).join('')+'</div>';
-  }
-  if(page==='app'){
-    return '<div class="g4"><div class="card"><div class="sv">1,240</div><div class="sl">Points</div></div><div class="card"><div class="sv">Gold</div><div class="sl">Tier</div></div><div class="card"><div class="sv">$62</div><div class="sl">Avg spend</div></div><div class="card"><div class="sv">4</div><div class="sl">Visits / mo</div></div></div><p class="muted" style="margin-top:1rem">Guest view of wallet + status after a Saturday visit.</p>';
-  }
-  if(page==='rewards'){
-    return '<div class="g3"><div class="card"><strong>Free slime upgrade</strong><div class="subtle">200 pts · Owned</div></div><div class="card"><strong>Pizza slice</strong><div class="subtle">350 pts</div></div><div class="card"><strong>Guest pass</strong><div class="subtle">800 pts</div></div></div>';
-  }
-  if(page==='vote'){
-    var votes=[["New glow slide",142],["Pixel hole 7",98],["Foam pit",87]];
-    return '<div class="card"><div class="fd" style="margin-bottom:.7rem">What should we build next?</div>'+votes.map(function(n){return '<div class="bar"><div class="bl" style="width:8rem">'+n[0]+'</div><div class="bt"><div class="bf" style="width:'+Math.min(100,n[1]/1.5)+'%"></div></div><div class="bv">'+n[1]+'</div></div>'}).join('')+'</div>';
-  }
-  return '';
+if(page==='ops')return '<div class="g" style="margin-bottom:.9rem"><div class="card"><div class="sv">'+S.g+'</div><div class="sl">Guests today</div></div><div class="card"><div class="sv">$'+S.r.toLocaleString()+'</div><div class="sl">Revenue</div></div><div class="card"><div class="sv">$'+S.t+'</div><div class="sl">Avg ticket</div></div><div class="card"><div class="sv">'+S.f+'%</div><div class="sl">Food attach</div></div></div><div class="card"><div class="fd" style="margin-bottom:.6rem">Hourly traffic</div>'+H.map(function(h){return '<div class="bar"><div class="bl">'+h[0]+'</div><div class="bt"><div class="bf" style="width:'+h[1]+'%"></div></div><div class="bv">'+h[1]+'</div></div>'}).join('')+'</div>';
+if(page==='winback')return '<p class="muted" style="margin-bottom:.7rem">'+S.w+' high-LTV accounts cooling off</p><div class="card" style="overflow:auto"><table><tr><th>Account</th><th>LTV</th><th>Last</th><th>Risk</th><th>Offer</th></tr>'+W.map(function(w){return '<tr><td style="font-weight:700">'+w[0]+'</td><td>$'+w[1].toLocaleString()+'</td><td>'+w[2]+'</td><td><span class="pill">'+w[3]+'</span></td><td>'+w[4]+'</td></tr>'}).join('')+'</table></div>';
+if(page==='labor')return '<div class="card" style="overflow:auto"><table><tr><th>Day</th><th>Demand</th><th>Staff</th><th>Need</th><th>Status</th></tr>'+L.map(function(l){var g=l[3]-l[2];return '<tr><td style="font-weight:700">'+l[0]+'</td><td>'+l[1]+'</td><td>'+l[2]+'</td><td>'+l[3]+'</td><td><span class="pill '+(g>0?'':'ok')+'">'+(g>0?('+'+g+' needed'):'Covered')+'</span></td></tr>'}).join('')+'</table></div>';
+if(page==='parties')return '<div class="card" style="overflow:auto"><table><tr><th>Kid</th><th>Age</th><th>Date</th><th>Stage</th><th>Value</th></tr>'+P.map(function(p){return '<tr><td style="font-weight:700">'+p[0]+'</td><td>'+p[1]+'</td><td>'+p[2]+'</td><td>'+p[3]+'</td><td>$'+p[4]+'</td></tr>'}).join('')+'</table></div>';
+if(page==='ads')return '<div class="g">'+A.map(function(a){return '<div class="card"><div style="display:flex;justify-content:space-between;gap:.4rem"><strong style="font-size:.85rem">'+a[0]+'</strong><span class="pill ok">'+a[3]+'</span></div><p class="muted" style="font-size:.8rem;margin-top:.35rem">'+a[1]+' · '+a[2]+'</p></div>'}).join('')+'</div>';
+if(page==='vip')return '<div class="g">'+V.map(function(v){return '<div class="card"><div class="fd" style="font-size:.92rem">'+v[0]+'</div><div class="subtle">'+v[1]+'</div><div style="font-weight:700;margin:.35rem 0">'+v[2]+'/'+v[3]+' RSVPs</div><span class="pill ok">'+v[4]+'</span></div>'}).join('')+'</div>';
+if(page==='app')return '<div class="g"><div class="card"><div class="sv">1,240</div><div class="sl">Points</div></div><div class="card"><div class="sv">Gold</div><div class="sl">Tier</div></div><div class="card"><div class="sv">$62</div><div class="sl">Avg spend</div></div><div class="card"><div class="sv">4</div><div class="sl">Visits / mo</div></div></div>';
+if(page==='rewards')return '<div class="g"><div class="card"><strong>Free slime upgrade</strong><div class="subtle">200 pts · Owned</div></div><div class="card"><strong>Pizza slice</strong><div class="subtle">350 pts</div></div><div class="card"><strong>Guest pass</strong><div class="subtle">800 pts</div></div></div>';
+if(page==='vote')return '<div class="card"><div class="fd" style="margin-bottom:.6rem">What should we build next?</div>'+[["New glow slide",142],["Pixel hole 7",98],["Foam pit",87]].map(function(n){return '<div class="bar"><div class="bl" style="width:7.5rem">'+n[0]+'</div><div class="bt"><div class="bf" style="width:'+Math.min(100,n[1]/1.5)+'%"></div></div><div class="bv">'+n[1]+'</div></div>'}).join('')+'</div>';
+return '';
 }
 function render(){
-  var el=document.getElementById('app');
-  if(!el) return;
-  if(page==='home') el.innerHTML=home();
-  else if(page==='app'||page==='rewards'||page==='vote') el.innerHTML=shell('SC Fargo · Guest app','Loyalty · rewards · votes',AT,body());
-  else el.innerHTML=shell('SC Fargo · Operator command','Park intelligence for Dan Bryant',OT,body());
-  var btns=el.querySelectorAll('[data-go]');
-  for(var i=0;i<btns.length;i++){
-    btns[i].addEventListener('click',function(ev){go(ev.currentTarget.getAttribute('data-go'));});
-  }
+var el=document.getElementById('app');if(!el)return;
+if(page==='home')el.innerHTML=home();
+else if(page==='app'||page==='rewards'||page==='vote')el.innerHTML=shell('SC Fargo · Guest app','Loyalty · rewards · votes',AT,body());
+else el.innerHTML=shell('SC Fargo · Operator command','Park intelligence for Dan Bryant',OT,body());
+[].forEach.call(el.querySelectorAll('[data-go]'),function(b){b.onclick=function(){go(b.getAttribute('data-go'))}});
 }
 render();
 })();
-</script>
-</body>
-</html>
+</script></body></html>
